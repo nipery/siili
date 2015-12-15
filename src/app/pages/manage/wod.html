@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row section topspace">
+        <div>
+            <span class="btn btn-primary" ng-click="toggle()">Add wod</span>
+        </div>
+        <div ng-show="isCreating">
+            <fieldset>
+                <legend>Create wod</legend>
+                <form class="form-group">
+                    <label>Wod Title</label>
+                    <input class="form-control" type="text" name="title" />
+
+                    <label>Wod description</label>
+                    <input class="form-control" type="text" name="description" />
+
+                    <label>Ajastus</label>
+                    <input class="form-control" type="text" name="publishAt" />
+                    <input type="submit" class="btn btn-success" value="Save" />
+                </form>
+            </fieldset>
+            
+        </div>
+
+        <table class="table table-striped table-responsive" ng-show="!isCreating">
+            <tr>
+                <th>Wod name</th>
+                <th>Wod published</th>
+                <th>Wod published by</th>
+                <th>Wod created Ad</th>
+            </tr>
+            <tr ng-repeat="wod in wods">
+                <td>{{wod.title}}</td>
+                <td>{{wod.publishAt}}</td>
+                <td>{{wod.created}}</td>
+                <td>Risto</td>
+            </tr>
+        </table>
+    </div>
+</div>
