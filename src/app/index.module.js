@@ -11,7 +11,8 @@
     'app.wods',
     'app.admin',
     'app.booking',
-    'app.basics'
+    'app.basics',
+        'app.login'
    // 'app.shop'
 ]);
 })();

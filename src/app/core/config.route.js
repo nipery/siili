@@ -38,7 +38,13 @@
                         templateUrl: 'app/shop/shop.html',
                         controller: 'shopCtrl',
                         controllerAs: "vm"
-            });
+                    }).state('login',{
+                        url: '/login',
+                        templateUrl: 'app/login/login.html',
+                        controller: 'loginController',
+                        controllerAs: "vm"
+                    
+                    });
 
             }
         ]);
